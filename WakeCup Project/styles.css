@@ -1,0 +1,782 @@
+/* =============== ALL FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ms+Madi&family=My+Soul&family=Oleo+Script&family=Oleo+Script+Swash+Caps&family=Orelega+One&family=Oswald&family=Patrick+Hand&family=Permanent+Marker&family=Shadows+Into+Light&family=Tapestry&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&family=Ms+Madi&family=My+Soul&family=Oleo+Script&family=Oleo+Script+Swash+Caps&family=Orelega+One&family=Oswald&family=Patrick+Hand&family=Permanent+Marker&family=Shadows+Into+Light&family=Tapestry&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Courgette&family=Ms+Madi&family=My+Soul&family=Oleo+Script&family=Oleo+Script+Swash+Caps&family=Orelega+One&family=Oswald&family=Patrick+Hand&family=Permanent+Marker&family=Shadows+Into+Light&family=Tapestry&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Acme&family=Bebas+Neue&family=Courgette&family=Ms+Madi&family=My+Soul&family=Oleo+Script&family=Oleo+Script+Swash+Caps&family=Orelega+One&family=Oswald&family=Patrick+Hand&family=Permanent+Marker&family=Shadows+Into+Light&family=Tapestry&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Acme&family=Bebas+Neue&family=Courgette&family=Dancing+Script&family=Ms+Madi&family=My+Soul&family=Oleo+Script&family=Oleo+Script+Swash+Caps&family=Orelega+One&family=Oswald&family=Patrick+Hand&family=Permanent+Marker&family=Shadows+Into+Light&family=Tapestry&family=Water+Brush&display=swap');
+
+/* =============== NAV BAR ================= */
+
+:root{
+    min-height: 100vw;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #553117;
+}
+.navBar img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid orange;
+    padding: 8px;
+}
+nav .logo{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    padding-top: 12px;
+}
+nav .logo .title{
+    font-family: "Oleo Script Swash Caps";
+    font-size: 24px;
+    padding: 8px;
+    padding-top: 18px;
+    padding-left: 20px;
+    color: bisque;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+}
+nav ul li{
+    padding:15px 15px ;
+}
+nav ul li:hover{
+    background-color: #83624a;
+    border-radius: 15px;
+}
+nav ul li.active{
+    /* background-color: #83624a; */
+    border-bottom: 4px solid bisque;
+}
+nav ul li a{
+    color: bisque;
+    text-decoration: none;
+    font-family: 'Patrick Hand';
+    font-size: 20px;
+}
+
+/* =============== MEDIA QUERY ================= */
+
+@media all and (max-width:800px) {
+    nav{
+        justify-content: flex-start;
+    }
+    nav ul{
+        justify-content: space-between;
+
+    }
+    /* .classicCoffee{
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    } */
+    /* .buy{
+        text-align: right;
+        justify-content: flex-end;
+        display: flex;
+        flex-direction: column;
+    } */
+
+    /* .titleAbout{
+        padding-left: 0px;
+    } */
+}
+@media all and (max-width:600px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        width: 100vw;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        overflow: hidden;
+        width: 100%;
+    }
+    .classicItem{
+        display: grid;
+
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4,auto);
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    /*.classicCoffee{
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 20px;
+    } */
+}
+/* ===============  ANNIMATION PART ================= */
+
+@keyframes animi1 {
+    from{
+        opacity: 0;
+        top:-100px;
+    }
+    to{
+        opacity: 1;
+        top:0;
+    }
+}
+@keyframes animi2 {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+/* =============== BANNER PART ================= */
+.banner{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center bottom;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.heading{
+    font-size: 48px;
+    color:#3b2210;
+    font-family: 'ABeeZee';
+    text-shadow: 2px 2px 0px bisque;
+    animation: animi1 2.5s forwards;
+    position: relative;
+}
+.heading .title{
+    font-family: "Oleo Script Swash Caps";
+    
+}
+.banner p{
+    font-family: 'Acme';
+    font-size: 24px;
+    color: #553117;
+    text-shadow: 1px 2px 1px bisque;
+    position: relative;
+    animation: animi2 5s forwards;
+}
+/* ---------- home banner ------------- */
+.bannerHome{
+    background-image: url(img/banner_img_3.jpg);
+}
+/* ---------- about banner ------------- */
+.aboutBanner{
+    background-image: url(img/aboutBanner.jpg);
+    background-position: center left;
+    text-align: left;
+    align-items: flex-start;
+}
+/* ---------- coffee blends banner ------------- */
+.CoffeeBlendsBanner{
+    background-image: url(img/coffeeBlendsBanner2.jpg);
+    background-position: center ;
+}
+.CoffeeBlendsHeading{
+    color: rgb(255, 255, 255);
+    text-shadow:4px 4px 0px #8d440c ;
+}
+#p{
+    color: rgb(255, 255, 255);
+    text-shadow:2px 2px 0px #8d440c ;
+}
+.aboutBanner p{
+    padding-left: 20px;
+}
+/* ******** classic banner ******** */
+.classicBanner{
+    background-image: url(img/classicBanner.jpg);
+}
+/* =============== FOOTER CONTAINT ================= */
+
+.footer{
+    background-color: #553117;
+    color: bisque;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Courgette';
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+/* =============== THANK YOU CONTAINT ================= */
+
+.ThankYou{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+.TYhead{
+    background-color: #f3ad7b;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-right: 10px;
+    color: rgb(78, 44, 2);
+    font-family: 'Oleo Script Swash Caps';
+    font-size: 25px;
+}
+.TYtell{
+    background-image: url('img/footer.jpg');
+    flex:1;
+}
+.TYtell p{
+    color: bisque;
+    font-family: 'Acme';
+    font-size: 30px;
+    text-shadow: 2px 2px 0px #3b2210;
+    font-style: italic;
+    text-align: center;
+}
+/* =============== HOME PAGE CONTAINT ================= */
+
+.homeItem{
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 400px; */
+    /* display: grid;
+    grid-template-columns: auto auto; */
+}
+.homeItem div{
+    margin: 10px;
+    border-radius: 10px;
+}
+.homeItem h3{
+    font-family: 'Acme';
+    font-size: 24px;
+    color: #3b2210;
+    padding-left: 15px;
+}
+.cafes{
+    background-color: bisque;
+    background-image: url(img/bg-img-3.jpg);
+    background-size: cover;
+    padding: 10px;
+    padding-left: 20px;
+    flex: 1;
+}
+.cafes p{
+    font-family: 'Acme';
+    font-size: 20px;
+    color: #3b2210;
+    padding-left: 15px;
+}
+.source{
+    background-color: rgb(230, 136, 21);
+    padding: 10px;
+    background-image: url(img/bg-img-2.jpg);
+    background-position: bottom;
+    background-size: cover;
+    padding-left: 20px;
+    flex: 1;
+    height: 650px;
+}
+.cafeImg{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+    text-shadow: 1px 1px 0px #3b2210;
+    color:bisque;
+}
+.cafeImg .a{
+    background-color: #c96c2a;
+    border-radius: 0px;
+    background-image: url(img/cafe1.jpg);
+    background-size: cover;
+    height: 200px;
+    grid-row: 1/2;
+    transition: all .2s ease-in;
+}
+.cafeImg .b{
+    background-color: #cab8ab;
+    border-radius: 0px;
+    grid-row: 2/3;
+    background-image: url(img/cafe2.jpg);
+    background-size: cover;
+    height: 200px;
+    transition: all .2s ease-in;
+}
+.cafeImg .c{
+    background-color: #cab8ab;
+    border-radius: 0px;
+    grid-row: 1/3;
+    grid-column: 2/3;
+    background-image: url(img/cafe3.jpg);
+    background-size: cover;
+    transition: all .2s ease-in;
+}
+.cafeImg .a:hover{
+    transform:scale(0.95);
+}
+.cafeImg .b:hover{
+    transform:scale(0.95);
+}
+.cafeImg .c:hover{
+    transform:scale(0.95);
+}
+.button{
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    background-color: #553117;
+    color: bisque;
+    font-family: 'Acme';
+    width: 200px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.button:hover{
+    background-color: #6f4e37;
+}
+.bodyText{
+    position:relative;
+    background-color:#ce9973;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Dancing Script';
+    font-size: 24px;
+    font-weight: 600;
+    color:#3b1d06
+}
+/* .bodyText .quote1::before{
+    display:inline-block;
+    content: open-quote;
+    color: #d6722a;
+    font-size: 90px;
+}
+.bodyText .quote2::after{
+    display:inline-block;
+    content: close-quote;
+    color: #d6722a;
+    font-size: 90px;
+} */
+.blankSpace{
+    height: 100px;
+}
+.smallBlankSpace{
+    height: 20px;
+}
+.source p{
+    font-family: 'Acme';
+    font-size: 20px;
+    color: #3b2210;
+    padding-left: 15px;
+}
+.sourceImg{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+    text-shadow: 1px 1px 0px #3b2210;
+    color:bisque;
+}
+.sourceImg .a{
+    background-color: #c96c2a;
+    border-radius: 0px;
+    background-image: url(img/source.jpg);
+    background-size: cover;
+    height: 200px;
+    grid-row: 1/2;
+    transition: all .2s ease-in;
+}
+.sourceImg .b{
+    background-color: #cab8ab;
+    border-radius: 0px;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-image: url(img/source2.jpg);
+    background-size: cover;
+    height: 200px;
+    transition: all .2s ease-in;
+}
+.sourceImg .c{
+    background-color: #cab8ab;
+    border-radius: 0px;
+    grid-row: 2/3;
+    grid-column: 1/3;
+    height: 220px;
+    background-image: url(img/source3.jpg);
+    background-size: cover;
+    transition: all .2s ease-in;
+}
+.sourceImg .a:hover{
+    transform:scale(0.95);
+}
+.sourceImg .b:hover{
+    transform:scale(0.95);
+}
+.sourceImg .c:hover{
+    transform:scale(0.95);
+}
+/* =============== ABOUT PAGE CONTAINT ================= */
+
+.aboutBody{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 20px;
+    /* height: 400px; */
+    color:#3b2210;
+    border: dashed 2px rgb(241, 165, 65);
+}
+.aboutBody h2{
+    font-family: "Oleo Script Swash Caps";
+    border-bottom: 4px solid rgb(248, 211, 162);
+    text-shadow: 2px 2px 0px #ce9973;
+}
+.aboutBody p{
+    font-family: 'Patrick Hand';
+    font-size: 22px;
+    text-shadow: 1px 1px 0px #ce9973;
+}
+.aboutImageGallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* height: 200px; */
+}
+.aboutImage{
+    height: 150px;
+    width: 200px;
+    padding-top: 15px;
+    border: dashed 2px rgb(241, 165, 65);
+    background-color: rgb(248, 211, 162);
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.aboutImage:hover{
+    transform: scale(1.10);
+    background-color:rgb(236, 173, 91) ;
+    border-color: #c96c2a;
+    border: 2px solid rgb(150, 86, 2);
+}
+/* =============== COFFEE BLENDS PAGE CONTAINT ================= */
+.coffeeBlendsHomeText{
+    background-color: burlywood;
+    padding: 25px;
+    font-size: 22px;
+    font-family: 'Oleo Script Swash Caps';
+    border: 2px dashed rgb(219, 141, 39) ;
+    border-radius: 10px;
+    color: #492104;
+    text-shadow: 1px 1px 0px rgb(126, 72, 3);
+}
+.coffeeBlendsHomeMainDiv{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+/*--------- classic part ----------*/
+.classic{
+    background-color: #ecc8ae;
+    flex:1;
+    padding:10px;
+    border-radius: 10px;
+}
+.classicImg{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+    row-gap: 20px;
+    column-gap: 40px;
+    justify-content: center;
+}
+.classicImg .a{
+    background-image: url(img/Classics/Decaf.jpg);
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    color:#8d440c;
+    border: 2px dashed rgb(189, 110, 6);
+    transition: all .2s ease-in-out;
+}
+.classicImg .b{
+    background-image: url(img/Classics/EspressoMinor.jpg);
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    color:#8d440c;
+    border: 2px dashed rgb(189, 110, 6);
+    transition: all .2s ease-in-out;
+}
+.classicImg .c{
+    background-image: url(img/Classics/HazelnutGold.jpg);
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    background-size: cover;
+    color:#8d440c;
+    border: 2px dashed rgb(189, 110, 6);
+    transition: all .2s ease-in-out;
+}
+.classicImg .d{
+    background-image: url(img/Classics/UpAndAdam.jpg);
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    color:#8d440c;
+    border: 2px dashed rgb(189, 110, 6);
+    transition: all .2s ease-in-out;
+}
+
+.classicImg .a:hover{
+    transform: scale(0.95);
+    border: 2px solid rgb(223, 130, 10);
+}
+.classicImg .b:hover{
+    transform: scale(0.95);
+    border: 2px solid rgb(223, 130, 10);
+}
+.classicImg .c:hover{
+    transform: scale(0.95);
+    border: 2px solid rgb(223, 130, 10);
+}
+.classicImg .d:hover{
+    transform: scale(0.95);
+    border: 2px solid rgb(223, 130, 10);
+}
+
+.classic h3{
+    font-family: 'Acme';
+    font-size: 24px;
+    color: #522f16;
+    padding-left: 15px;
+}
+.classic p{
+    font-family: 'Acme';
+    font-size: 20px;
+    color: #522f16;
+    padding-left: 15px;
+}
+/*--------- unique part ----------*/
+.unique{
+    background-color: #eeb892;
+    flex:1;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.uniqueImg{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
+    row-gap: 20px;
+    column-gap: 10px;
+    justify-content: center;
+}
+.uniqueImg .a{
+    background-image: url(img/UniqueBlends/EthiopianGrand.jpg);
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    color:#8d440c;
+    border: 2px dashed rgb(189, 110, 6);
+    transition: all .2s ease-in-out;
+}
+.uniqueImg .b{
+    background-image: url(img/UniqueBlends/KLEstate.jpg);
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    color:#8d440c;
+    border: 2px dashed rgb(189, 110, 6);
+    transition: all .2s ease-in-out;
+}
+.uniqueImg .c{
+    background-image: url(img/UniqueBlends/NuttyBrazil.jpg);
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    background-size: cover;
+    color:#8d440c;
+    border: 2px dashed rgb(189, 110, 6);
+    transition: all .2s ease-in-out;
+}
+.uniqueImg .d{
+    background-image: url(img/UniqueBlends/Robusta.jpg);
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    color:#8d440c;
+    border: 2px dashed rgb(189, 110, 6);
+    transition: all .2s ease-in-out;
+}
+.uniqueImg .e{
+    background-image: url(img/UniqueBlends/The1980Blend.jpg);
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    color:#8d440c;
+    border: 2px dashed rgb(189, 110, 6);
+    transition: all .2s ease-in-out;
+}
+.uniqueImg .f{
+    background-image: url(img/UniqueBlends/WakeCup_Arabica.jpg);
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    color:#8d440c;
+    border: 2px dashed rgb(189, 110, 6);
+    transition: all .2s ease-in-out;
+}
+
+.uniqueImg .a:hover{
+    transform: scale(0.95);
+    border: 2px solid rgb(223, 130, 10);
+}
+.uniqueImg .b:hover{
+    transform: scale(0.95);
+    border: 2px solid rgb(223, 130, 10);
+}
+.uniqueImg .c:hover{
+    transform: scale(0.95);
+    border: 2px solid rgb(223, 130, 10);
+}
+.uniqueImg .d:hover{
+    transform: scale(0.95);
+    border: 2px solid rgb(223, 130, 10);
+}
+.uniqueImg .e:hover{
+    transform: scale(0.95);
+    border: 2px solid rgb(223, 130, 10);
+}
+.uniqueImg .f:hover{
+    transform: scale(0.95);
+    border: 2px solid rgb(223, 130, 10);
+}
+
+.unique h3{
+    font-family: 'Acme';
+    font-size: 24px;
+    color: #522f16;
+    padding-left: 15px;
+}
+.unique p{
+    font-family: 'Acme';
+    font-size: 20px;
+    color: #522f16;
+    padding-left: 15px;
+}
+/* =============== CLASSIC PAGE CONTAINT ================= */
+.classicHomeText{
+    background-color:antiquewhite;
+    padding:15px;
+    border-radius: 10px;
+    color:#492104;
+    text-shadow: 2px 2px 0px rgb(241, 165, 65);
+}
+.classicHomeText h2{
+    font-family: 'Oleo Script Swash Caps';
+    font-size: 30px;
+    border-bottom: 4px solid rgb(241, 165, 65);
+}
+.classicHomeText p,.classicImgText p{
+    font-size:20px;
+    font-family: 'Patrick Hand';
+    font-weight: 600;
+}
+.classicItem{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.classicCoffee{
+    background-color: #f5c7a7;
+    border-radius: 10px;
+    /* display: grid;
+    grid-template-columns: auto auto; */
+    padding: 20px;
+    display: flex;
+    column-gap: 20px;
+}
+/* .classicImg{
+    background-color: #c96c2a;
+} */
+.classicCoffee img{
+    /* height: 250px; */
+    width: 250px;
+    border-radius: 10px;
+    border: 2px dashed rgb(241, 165, 65);
+    transition: all .2s ease-in;
+}
+.classicCoffee img:hover{
+    transform: scale(0.95);
+    border: 2px solid rgb(223, 130, 10);
+}
+.classicImgText{
+    background-color:#f1b88f ;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #492104;
+    border-radius: 10px;
+    border: 2px dashed rgb(241, 165, 65);
+    text-shadow: 2px 2px 0px rgb(241, 165, 65);
+}
+.classicImgText h3{
+    font-family: 'Acme';
+    border-bottom: 4px solid rgb(241, 165, 65);
+}
+.buy{
+    text-align: right;
+    justify-content: flex-end;
+    display: flex;
+}
+.buyButton{
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    background-color: #4b280f;
+    color: bisque;
+    font-family: 'Acme';
+    font-weight: 400;
+    font-size: 16px;
+    text-shadow: 0px 0px 0px;
+    border: 2px solid #3b1d06;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.buyButton:hover{
+    background-color: #6f4e37;
+}
